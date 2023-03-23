@@ -6,6 +6,8 @@ import App from './App';
 import './index.css';
 import theme from './theme';
 
+import './styles/global.scss';
+
 const Main: React.FC = () => {
   return (
     <BrowserRouter>

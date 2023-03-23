@@ -3,30 +3,16 @@ import { extendTheme } from '@chakra-ui/react';
 export default extendTheme({
   colors: {
     transparent: 'transparent',
-    black: '#111',
+    black: '#020202',
     white: '#fff',
-    grey: '#fbfbfb',
-    body: '#767676',
-    success: '#43a047',
-    danger: '#DC3545',
-    muted: '#b6b6b6',
-    secondary: '#f6b701',
-    primary: {
-      main: '#243d97',
-      50: '#e3f2fd',
-      100: '#b6bedc',
-      200: '#919ecb',
-      300: '#6d7eba',
-      400: '#495da8',
-      500: '#243d97',
-      600: '#1e337e',
-      700: '#182965',
-      800: '#121f4c',
-      900: '#0c1432',
-    },
+    grey: '#FAFAFC',
+    success: '#1ABC9C',
+    danger: '#D9435E',
+    primary: '#FFC700',
+    secondary: '#8D92A3',
   },
   fonts: {
-    body: 'Inter, sans-serif',
+    body: 'Poppins, sans-serif',
   },
   button: {
     defaultProps: {
@@ -39,7 +25,7 @@ export default extendTheme({
       baseStyle: {
         field: {
           _placeholder: {
-            color: '#b6b6b6',
+            color: '#8D92A3',
             fontSize: 14,
           },
         },
