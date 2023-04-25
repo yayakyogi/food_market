@@ -16,6 +16,7 @@ html {
 }
   
 body {
+  min-height: 100vh;
   height: 100vh;
   padding: 0;
   position: relative !important;
@@ -30,6 +31,8 @@ body {
   max-width: $container-width;
   margin: 0 auto;
   background-color: $grey-color;
+  border-right: 1px solid $secondary-color;
+  border-left: 1px solid $secondary-color;
 }
 
 ::-webkit-scrollbar {

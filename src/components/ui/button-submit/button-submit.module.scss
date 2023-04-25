@@ -1,0 +1,26 @@
+.button {
+  width: 100%;
+  background-color: $primary-color;
+  text-align: center;
+  padding: 12px;
+  border-radius: $border-radius;
+  font-weight: 500;
+  color: $black-color;
+  border: none;
+
+  &:hover {
+    background-color: $gold-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-secondary {
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+}

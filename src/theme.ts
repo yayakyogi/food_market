@@ -8,11 +8,15 @@ export default extendTheme({
     grey: '#FAFAFC',
     success: '#1ABC9C',
     danger: '#D9435E',
-    primary: '#FFC700',
-    secondary: '#8D92A3',
+    primary: {
+      500: '#FFC700',
+    },
+    secondary: {
+      500: '#8D92A3',
+    },
   },
   fonts: {
-    body: 'Poppins, sans-serif',
+    body: 'Inter, sans-serif',
   },
   button: {
     defaultProps: {
@@ -25,7 +29,7 @@ export default extendTheme({
       baseStyle: {
         field: {
           _placeholder: {
-            color: '#8D92A3',
+            color: '#b6b6b6',
             fontSize: 14,
           },
         },
