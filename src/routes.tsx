@@ -1,4 +1,5 @@
 /*  eslint-disable react/react-in-jsx-scope */
+import HomePage from '@pages/home';
 import LoginPage from '@pages/login';
 import RegisterPage from '@pages/register';
 import RegisterAddressPage from '@pages/register/address';
@@ -10,8 +11,7 @@ export default [
     element: <LoginPage />,
   },
   {
-    path: '/register',
-    // element: <RegisterPage />,
+    path: 'register',
     children: [
       { index: true, element: <RegisterPage /> },
       {
@@ -19,5 +19,9 @@ export default [
         element: <RegisterAddressPage />,
       },
     ],
+  },
+  {
+    path: 'home',
+    element: <HomePage />,
   },
 ] as RouteObject[];

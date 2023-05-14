@@ -2,4 +2,9 @@
   width: 100%;
   background-color: $white-color;
   margin-bottom: 24px;
+
+  .subtitle {
+    font-weight: 200 !important;
+    color: $secondary-color;
+  }
 }

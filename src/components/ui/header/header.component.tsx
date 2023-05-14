@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { IconChevronLeft } from '@tabler/icons';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -10,9 +10,10 @@ interface Props {
   subtitle: string;
   backUrl?: string;
   forceBack?: boolean;
+  sourcePhoto?: string;
 }
 
-const Header: React.FC<Props> = ({ title, subtitle, backUrl, forceBack }) => {
+const Header: React.FC<Props> = ({ title, subtitle, backUrl, forceBack, sourcePhoto }) => {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -24,16 +25,17 @@ const Header: React.FC<Props> = ({ title, subtitle, backUrl, forceBack }) => {
   };
 
   return (
-    <Flex alignItems="center" gap={5} py={30} px={forceBack ? 5 : 30} className={style.header}>
-      {forceBack && <IconChevronLeft size={30} onClick={goBack} />}
-      <Box>
-        <Text fontSize="22px" fontWeight="medium">
-          {title}
-        </Text>
-        <Text fontWeight="light" color="secondary">
-          {subtitle}
-        </Text>
-      </Box>
+    <Flex alignItems="center" justifyContent="space-between" py={30} px={forceBack ? 5 : 30} className={style.header}>
+      <Flex alignItems="center" gap={5}>
+        {forceBack && <IconChevronLeft size={30} onClick={goBack} />}
+        <Box>
+          <Text fontSize="22px" fontWeight="medium">
+            {title}
+          </Text>
+          <Text className={style.subtitle}>{subtitle}</Text>
+        </Box>
+      </Flex>
+      {sourcePhoto && <Image src={sourcePhoto} w={16} borderRadius="lg" />}
     </Flex>
   );
 };
@@ -41,6 +43,7 @@ const Header: React.FC<Props> = ({ title, subtitle, backUrl, forceBack }) => {
 Header.defaultProps = {
   backUrl: undefined,
   forceBack: false,
+  sourcePhoto: '',
 };
 
 export default Header;

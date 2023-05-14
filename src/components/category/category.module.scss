@@ -1,0 +1,27 @@
+.container {
+  background-color: $white-color;
+  margin: 20px 0;
+
+  .tab {
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    border-bottom: none;
+  }
+
+  .tab[aria-selected="true"]{
+    color: $black-color;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 50%;
+      height: 3px;
+      border-radius: $border-radius;
+      background-color: $black-color;
+    }
+  }
+}

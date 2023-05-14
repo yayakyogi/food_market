@@ -33,6 +33,7 @@ body {
   background-color: $grey-color;
   border-right: 1px solid $secondary-color;
   border-left: 1px solid $secondary-color;
+  overflow: auto;
 }
 
 ::-webkit-scrollbar {
