@@ -1,0 +1,61 @@
+.button {
+  position: absolute !important;
+  top: 20px;
+  left: -10px;
+  background-color: transparent !important;
+  z-index: 1;
+  width: 100px;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.information {
+  z-index: 9999;
+  padding: 26px 16px 0;
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  margin-top: -30px;
+  background-color: white;
+  flex: 1;
+  overflow: auto;
+
+  .description {
+    margin-top: 12px;
+    font-size: 14px;
+    color: $secondary-color;
+    line-height: 24px;
+  }
+
+  .ingredients {
+    margin-top: 16px;
+
+    .material {
+      color: $secondary-color;
+      margin-top: 4px;
+    }
+  }
+}
+
+.action {
+  padding: 16px;
+  background-color: white;
+  border-top: 2px solid $grey-color;
+
+  .label {
+    font-size: 14px;
+    color: $secondary-color;
+  }
+
+  .total {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  button {
+    background-color: $primary-color;
+    width: 50%;
+    height: 50px;
+  }
+}

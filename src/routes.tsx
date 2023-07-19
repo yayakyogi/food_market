@@ -1,4 +1,5 @@
 /*  eslint-disable react/react-in-jsx-scope */
+import DetailPage from '@pages/detail';
 import HomePage from '@pages/home';
 import LoginPage from '@pages/login';
 import RegisterPage from '@pages/register';
@@ -23,5 +24,9 @@ export default [
   {
     path: 'home',
     element: <HomePage />,
+  },
+  {
+    path: 'food/:id',
+    element: <DetailPage />,
   },
 ] as RouteObject[];
